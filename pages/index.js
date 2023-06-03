@@ -1,46 +1,30 @@
-import fs from 'fs'
-import matter from 'gray-matter'
-import Link from 'next/link'
-import Head from 'next/head'
+import Head from "next/head"
+import { Component } from 'react'
+import { attributes, react as HomeContent } from '../content/home.md'
 
-export default function Home({ blogs }) {
-  return (<div>
-    <Head>
-      <title>Demo Blog</title>
-    </Head>
-    <h1>Welcome to my blog</h1>
-    <p>This is a subtitle idk what to type here</p>
-    <ul>
-      {blogs.map(blog => (
-        <li key={blog.slug}>
-          <Link href={`/blog/${blog.slug}`}>
-            <a>{blog.date}:{blog.title}</a>
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </div>)
-}
-
-export async function getStaticProps() {
-  // List of files in blgos folder
-  const filesInBlogs = fs.readdirSync('./content')
-
-  // Get the front matter and slug (the filename without .md) of all files
-  const blogs = filesInBlogs.map(filename => {
-    const file = fs.readFileSync(`./content/${filename}`, 'utf8')
-    const matterData = matter(file)
-
-    return {
-      ...matterData.data, // matterData.data contains front matter
-      slug: filename.slice(0, filename.indexOf('.'))
-    }
-  })
-
-  return {
-    props: {
-      blogs
-    }
+export default class Home extends Component {
+  render() {
+    let { title, cats } = attributes
+    return (
+      <>
+        <Head>
+          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        </Head>
+        <article>
+          <h1>{title}</h1>
+          <HomeContent />
+          <ul> 
+            {cats.map((cat, k) => (
+              <li key={k}>
+                <h2>{cat.name}</h2>
+                <p>{cat.description}</p>
+                <img src={cat.photo} alt={cat.name}/>
+              </li>
+            ))}
+          </ul>
+        </article>
+      </>
+    )
   }
-
 }
+
