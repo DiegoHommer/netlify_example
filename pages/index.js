@@ -13,7 +13,7 @@ export default class Home extends Component {
         <article>
           <h1>{title}</h1>
           <HomeContent />
-          <ul>
+          <ul> 
             {cats.map((cat, k) => (
               <li key={k}>
                 <h2>{cat.name}</h2>
