@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { Component } from 'react'
 import { attributes, react as HomeContent } from '../content/home.md'
-import styles from "pages/home.css"
+import styles from "./Home.module.css"
 
 export default class Home extends Component {
   render() {
@@ -12,7 +12,7 @@ export default class Home extends Component {
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         </Head>
         <article>
-          <h1 style={styles.header}>{title}</h1>
+          <h1 className={styles.header}>{title}</h1>
           <HomeContent />
           <ul> 
             {cats.map((cat, k) => (
