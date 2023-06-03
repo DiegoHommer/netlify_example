@@ -18,6 +18,7 @@ export default class Home extends Component {
               <li key={k}>
                 <h2>{cat.name}</h2>
                 <p>{cat.description}</p>
+                <img src={cat.photo} alt={cat.name}/>
               </li>
             ))}
           </ul>

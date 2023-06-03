@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-media_folder: public/img
-public_folder: img
+media_folder: public/images
+public_folder: images
 collections:
   - name: "pages"
     label: "Pages"
@@ -20,3 +20,4 @@ collections:
           fields:
             - { label: "Name", name: "name", widget: "string"}
             - { label: "Description", name: "description", widget: "text"}
+            - { label: "Photo", name: "photo", widget: "image"}
