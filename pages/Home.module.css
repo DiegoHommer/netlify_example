@@ -1,6 +1,10 @@
-.header{
-    flex: 1;
+.container{
+    display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.imageContainer{
+    flex: 1;
 }
 
