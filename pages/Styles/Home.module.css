@@ -1,0 +1,15 @@
+.container {
+    text-align: center;
+    padding-top: 20%;
+    background-color: #cd600d;
+    font: serif;
+  }
+  
+  .header {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    margin-bottom: 2rem;
+  }
+  

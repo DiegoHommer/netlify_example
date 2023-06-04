@@ -1,0 +1,10 @@
+.recipe-list {
+    text-align: start;
+    margin: auto;
+    width: max-content;
+    }
+  
+  .recipe-list a {
+    color: rgb(4, 165, 165);
+    text-decoration: underline;
+    }

@@ -15,5 +15,16 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Photo", name: "photo", widget: "image"}
+      - label: "Recipe"
+        name: "recipe"
+        widget: "object"
+        fields:
+          - label: "Ingredients" 
+            name: "ingredients" 
+            widget: "list" 
+            field: {label: "Ingredient", name: "ingredient", widget: "string"}
+          - label: "Instructions"
+            name: "instructions"
+            widget: "text"
+      
