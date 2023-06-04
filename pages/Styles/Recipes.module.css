@@ -17,6 +17,7 @@
 
 .recipe-list-element {
     height: fit-content;
+    width: fit-content;
     display: flex;
     border: 5px solid black;
     margin-top: 20px;
@@ -50,6 +51,7 @@
     gap: 20px;
     font-weight: bold;
     font-size: 3rem;
+    white-space: nowrap;
 }
 
 .recipeHeader div {
@@ -72,6 +74,7 @@
     line-height: 15px;
     font-size: calc(10px + 0.5vw);
     border-right: 3px solid black;
+    overflow: scroll;
 }
 
 .instructions {
@@ -85,5 +88,6 @@
     line-height: 15px;
     text-align: justify;
     font-size: calc(8px + 0.5vw);
+    overflow: scroll;
 }
   
