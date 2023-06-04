@@ -3,8 +3,7 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 media_folder: "public/images" # Where media files will be stored
-public_folder: "public/images" # Where the media files can be accesed from the server
-publish_mode: editorial_workflow # For Drafts
+public_folder: "/images" # Where the media files can be accesed from the server
 
 collections:
   - name: "recipe" 

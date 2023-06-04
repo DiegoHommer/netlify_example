@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import styles from './Styles/Home.module.css'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 export default function Home() {
 

@@ -1,5 +1,6 @@
 import fs from 'fs'
 import matter from 'gray-matter'
+import Image from 'next/image'
 import styles from './Styles/Recipes.module.css'
 
 export default function Recipes({ recipes }) {
@@ -9,7 +10,7 @@ export default function Recipes({ recipes }) {
             <div>
               <h1> {recipe.title} </h1>
               <h2> {recipe.date} </h2>
-              <img src={recipe.photo} alt={recipe.title}/>
+              <Image src={recipe.photo} alt={recipe.title}/>
               <h3> {recipe.body} </h3>
             </div>
         ))}
