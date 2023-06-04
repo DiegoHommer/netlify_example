@@ -2,7 +2,7 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import Head from 'next/head'
-import styles from 'pages/Home.module.css'
+import styles from '/Home.module.css'
 
 export default function Home({ blogs }) {
   return (<div className={styles['container']}>
