@@ -26,10 +26,10 @@ export default function Home({ recipes }) {
 
 export async function getStaticProps() {
   // List of files in blgos folder
-  const filesInCats = fs.readdirSync('./content/recipes')
+  const filesInRecipes = fs.readdirSync('./content/recipes')
 
   // Get the front matter and slug (the filename without .md) of all files
-  const cats = filesInCats.map(filename => {
+  const recipes = filesInRecipes.map(filename => {
     const file = fs.readFileSync(`./content/recipes/${filename}`, 'utf8')
     const matterData = matter(file)
 
