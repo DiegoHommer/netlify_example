@@ -4,19 +4,20 @@ import Link from 'next/link'
 import Head from 'next/head'
 import styles from './Home.module.css'
 
-export default function Home({ cats }) {
+export default function Home({ recipes }) {
   return (<div className={styles['container']}>
     <Head>
       <title>Demo </title>
     </Head>
-    <h1 className={styles['header']}>Welcome to my blog</h1>
-    <p className={styles['subtitle']}>This is a subtitle idk what to type here</p>
+    <h1 className={styles['header']}>Cooking Recipes</h1>
+    <p className={styles['subtitle']}>Home made recipes available right here!</p>
     <ul className={styles['blog-list']}>
-      {cats.map(cat => (
+      {recipes.map(recipe => (
         <div>
-          <h1> {cat.name} </h1>
-          <h2> {cat.description} </h2>
-          <img src={cat.photo} alt={cat.name}/>
+          <h1> {recipe.title} </h1>
+          <h2> {recipe.date} </h2>
+          <h3> {recipe.body} </h3>
+          <img src={recipe.photo} alt={recipe.title}/>
         </div>
       ))}
     </ul>
@@ -25,11 +26,11 @@ export default function Home({ cats }) {
 
 export async function getStaticProps() {
   // List of files in blgos folder
-  const filesInCats = fs.readdirSync('./content/cats')
+  const filesInCats = fs.readdirSync('./content/recipes')
 
   // Get the front matter and slug (the filename without .md) of all files
   const cats = filesInCats.map(filename => {
-    const file = fs.readFileSync(`./content/cats/${filename}`, 'utf8')
+    const file = fs.readFileSync(`./content/recipes/${filename}`, 'utf8')
     const matterData = matter(file)
 
     return {
@@ -40,7 +41,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      cats
+      recipes
     }
   }
 
