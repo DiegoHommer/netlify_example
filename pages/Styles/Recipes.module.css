@@ -17,7 +17,8 @@
 
 .recipe-list-element {
     height: fit-content;
-    width: fit-content;
+    width: 80%;
+    min-width: fit-content;
     display: flex;
     border: 5px solid black;
     margin-top: 20px;
@@ -48,7 +49,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     font-weight: bold;
     font-size: 3rem;
     white-space: nowrap;
