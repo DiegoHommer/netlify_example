@@ -10,7 +10,7 @@ export default function Recipes({ recipes }) {
             <div>
               <h1> {recipe.title} </h1>
               <h2> {recipe.date} </h2>
-              <Image src={recipe.photo} alt={recipe.title}/>
+              <img src={recipe.photo} alt={recipe.title}/>
               <h3> {recipe.body} </h3>
             </div>
         ))}
