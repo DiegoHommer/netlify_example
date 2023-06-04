@@ -9,10 +9,13 @@ export default function Home() {
     <Head>
       <title>IDE's Culinary Site</title>
     </Head>
-    <h1 className={styles['header']}>Cooking Recipes</h1>
-    <p className={styles['subtitle']}>Home made recipes available right 
-      <Link href="/recipes"> HERE </Link>
-    </p>
+    <div className={styles["header"]}>
+      <h1>Cooking Recipes </h1>
+      <p> Home made recipes available for your convenience </p>
+    </div>
+    <div className={styles['buttonsContainer']}>
+      <Link href="/recipes" className={styles['buttonStyle']}> RECIPES </Link>
+    </div>
   </div>)
 }
 

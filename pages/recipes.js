@@ -1,20 +1,37 @@
 import fs from 'fs'
 import matter from 'gray-matter'
-import Image from 'next/image'
 import styles from './Styles/Recipes.module.css'
 
 export default function Recipes({ recipes }) {
     return(
-        <ul className={styles['recipe-list']}>
+      <div className={styles['container']}> 
+        <div className={styles['recipe-list']}>
         {recipes.map(recipe => (
-            <div>
-              <h1> {recipe.title} </h1>
-              <h2> {recipe.date} </h2>
-              {recipe.photo && <img className="thumbnail" width={80} src={recipe.photo} alt=""/> }
-              <h3> {recipe.body} </h3>
+          <div className={styles['recipe-list-element']}>
+            {recipe.photo && <img className={styles["imageContainer"]} width={80} src={recipe.photo} alt=""/> }
+            <div className={styles['recipeContainer']}>
+              
+              <div className={styles['recipeHeader']}>
+                {recipe.title}
+                <div> {recipe.date} </div>
+              </div>
+
+              <div className={styles['recipeBody']}>
+                <div className={styles['ingredients']}>
+                <h3> Ingredients: </h3>
+                  {recipe.howtomake.ingredients.map(ingredient => (
+                   <text> * {ingredient} </text>))} 
+                </div>
+                <div className={styles['instructions']}>
+                <h3> Instructions: </h3>
+                  <text> {recipe.howtomake.instructions} </text>
+                </div>
+              </div>
             </div>
+          </div>
         ))}
-        </ul>
+        </div>
+      </div>
     )
 }
 
