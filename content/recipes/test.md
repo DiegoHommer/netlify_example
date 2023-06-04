@@ -1,5 +1,5 @@
 ---
-title: My First Recipe
+title: My Pet Cat
 date: 24, August, 2021
 photo: public/images/grumpy.jpg
 recipe:
