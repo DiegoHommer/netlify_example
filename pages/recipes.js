@@ -10,20 +10,19 @@ export default function Recipes({ recipes }) {
           <div className={styles['recipe-list-element']}>
             {recipe.photo && <img className={styles["imageContainer"]} width={80} src={recipe.photo} alt=""/> }
             <div className={styles['recipeContainer']}>
-              
               <div className={styles['recipeHeader']}>
                 {recipe.title}
                 <div> {recipe.date} </div>
               </div>
-
               <div className={styles['recipeBody']}>
                 <div className={styles['ingredients']}>
-                <h3> Ingredients: </h3>
+                  <h3> Ingredients: </h3>
                   {recipe.howtomake.ingredients.map(ingredient => (
-                   <text> * {ingredient} </text>))} 
+                    <text> * {ingredient} </text>
+                  ))} 
                 </div>
                 <div className={styles['instructions']}>
-                <h3> Instructions: </h3>
+                  <h3> Instructions: </h3>
                   <text> {recipe.howtomake.instructions} </text>
                 </div>
               </div>

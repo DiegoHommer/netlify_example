@@ -16,9 +16,9 @@
     }
 
 .recipe-list-element {
+    height: fit-content;
     display: flex;
     border: 5px solid black;
-    height: 50vh;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -42,6 +42,8 @@
 
 .recipeHeader {
     height: 30%;
+    min-height: fit-content;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,6 +58,7 @@
 
 .recipeBody{
     height: 70%;
+    min-height: fit-content;
     display: flex;
     border-top: 3px solid black;
 }
@@ -65,16 +68,22 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+    line-height: 15px;
     font-size: calc(10px + 0.5vw);
     border-right: 3px solid black;
 }
 
 .instructions {
-    height: 100%;
     flex: 2;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    font-size: calc(10px + 0.5vw);
+}
+
+.instructions text{
+    line-height: 15px;
+    text-align: justify;
+    font-size: calc(8px + 0.5vw);
 }
   
