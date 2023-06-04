@@ -1,10 +1,13 @@
 .recipe-list {
+    display: flex;
     text-align: start;
     margin: auto;
     width: max-content;
     }
+
+.recipeContainer {
+    margin-block: auto;
+    border-width: 5px;
+    border-radius: 10px;
+}
   
-  .recipe-list a {
-    color: rgb(4, 165, 165);
-    text-decoration: underline;
-    }
