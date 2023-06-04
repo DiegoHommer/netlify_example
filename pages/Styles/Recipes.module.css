@@ -16,7 +16,8 @@
     }
 
 .recipe-list-element {
-    height: fit-content;
+    height: 50vh;
+    min-height: fit-content;
     width: 80%;
     min-width: fit-content;
     display: flex;
@@ -53,6 +54,7 @@
     font-weight: bold;
     font-size: 3rem;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .recipeHeader div {
